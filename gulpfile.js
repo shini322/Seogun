@@ -26,6 +26,7 @@ gulp.task('scss', function(){
 gulp.task('css', function(){
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
+    'node_modules/chart.js/dist/Chart.css',
     // 'node_modules/slick-carousel/slick/slick.css',
     // 'node_modules/swiper/swiper-bundle.css',
     'assest/css/jquery.fancybox.css',
@@ -54,9 +55,7 @@ gulp.task('script', function(){
 
 gulp.task('js', function(){
   return gulp.src([
-    // 'node_modules/slick-carousel/slick/slick.js',
-    // 'node_modules/swiper/swiper-bundle.js',
-    // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+    'node_modules/chart.js/dist/Chart.js',
     'assest/js/jquery.fancybox.js',
     'assest/js/jquery-ui.min.js',
     'assest/js/jquery.nice-select.min.js',
