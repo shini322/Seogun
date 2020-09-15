@@ -58,6 +58,9 @@ header{
     cursor: pointer;
     background-color: transparent;
  }
+ .hide{
+     display: none;
+ }
  .show{
     display: block;
   }
@@ -143,6 +146,9 @@ header{
         &::before{
             width: 100%;
         }
+        .add-button__plus{
+            color: $white;
+        }
     }
     &__plus{
         margin-left: 13px;
@@ -150,6 +156,7 @@ header{
         font-size: 26px;
         line-height: 21px;
         color: $red;
+        transition: .3s;
     }
 }
 .logo{
@@ -887,6 +894,7 @@ header{
     display: flex;
     align-items: flex-start;
     padding-top: 10px;
+    padding-bottom: 100px;
     // @include for-lg-md{
     //     flex-direction: column;
     // }
@@ -1223,18 +1231,20 @@ header{
     //     align-items: flex-start;
     // }
     &__project{
-        margin-left: auto;
+        margin-left: auto !important;
     }
     &__button{
         // @include for-md-mob{
         //     margin-bottom: 10px;
         // }
     }
+    >* + *{
+        margin-left: 45px;
+    }
 }
 .table-settings{
     position: relative;    
     padding-left: 35px;
-    margin-left: 45px;
     // @include for-md-mob{
     //     margin-left: 0;
     // }
@@ -1309,14 +1319,16 @@ header{
     }
 }
 .competitors{
-    &__table{
-        width: 1247px;
-    }
     &__table-block{
+        margin-top: 32px; 
         overflow-x: scroll;
     }
+    &__table{
+        width: 1260px;
+    }
+}
+.line-chart{
     &__chart{
-        
         overflow-x: scroll;
     }
     &__chart-block{
@@ -1358,7 +1370,7 @@ header{
     }
     &__tr{
         &--empty{
-            .competitors__td{
+            .table__td{
                 border-bottom: 0;
             }
         }
@@ -1395,11 +1407,7 @@ header{
         // padding-left: 55px;
     }
 }
-.competitors{
-    &__table{
-        margin-top: 32px;
-    }
-}
+
 .total{
     &__item{
         position: relative;
@@ -1432,3 +1440,31 @@ header{
         }
     }
 }  
+.pages{
+    &__th{
+        padding: 15px;
+        &:first-child{
+            padding-left: 23px !important;
+        }
+    }
+    &__th:not([colspan="2"]){
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &__th[colspan="2"]{
+        padding-right: 0;
+    }
+    &__td{
+        padding: 15px !important;
+        &:first-child{
+            padding-left: 23px !important;
+        }
+    }
+    &__table-block{
+        margin-top: 32px; 
+        overflow-x: scroll;
+    }
+    &__table{
+        width: 1260px;
+    }
+}

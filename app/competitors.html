@@ -142,13 +142,13 @@
                                             </span>
                                             <svg class="tabs__item-icon tabs__item-icon--vision"><use xlink:href="images/sprite.svg#icon-vision-1"></use></svg>
                                         </div>
-                                        <div class="tabs__item tab active">
+                                        <div class="tabs__item tab">
                                             <span class="tabs__item-text">
                                                 Keywords
                                             </span>                                            
                                             <svg class="tabs__item-icon tabs__item-icon--search"><use xlink:href="images/sprite.svg#icon-search"></use></svg>
                                         </div>
-                                        <div class="tabs__item tab">
+                                        <div class="tabs__item active tab">
                                             <span class="tabs__item-text">
                                                 Competitors
                                             </span>
@@ -182,6 +182,12 @@
                             </div>
                             <div class="tabs-content">
                                 <div class="tabs-content__content-tab">
+                                    
+                                </div>  
+                                <div class="tabs-content__content-tab">
+                                   
+                                </div> 
+                                <div class="tabs-content__content-tab">
                                     <div class="settings">
                                         <button class="add-button settings__button">
                                             Add Competitors
@@ -206,9 +212,9 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="competitors__chart">
-                                        <div class="competitors__chart-block">
-                                            <canvas class="competitors__canvas" height="5vh" width="100%" id="competitors-chart"></canvas>
+                                    <div class="line-chart">
+                                        <div class="line-chart__chart-block">
+                                            <canvas class="line-chart__canvas" height="5vh" width="100%" id="competitors-chart"></canvas>
                                         </div>
                                     </div>
                                     <div class="competitors__table-block">
@@ -490,13 +496,442 @@
                                     </div>
                                 </div>  
                                 <div class="tabs-content__content-tab">
-
-                                </div> 
-                                <div class="tabs-content__content-tab">
-                                    
-                                </div>  
-                                <div class="tabs-content__content-tab">
-                                    
+                                    <div class="settings">
+                                        <button class="table-settings">
+                                            <svg class="table-settings__icon table-settings__icon--setup"><use xlink:href="images/sprite.svg#icon-setup"></use></svg>
+                                            <div class="table-settings__text table-settings__text--grey">
+                                                Table
+                                            </div>
+                                            <div class="table-settings__text table-settings__text--black">
+                                                Settings
+                                            </div>
+                                        </button>
+                                        <div class="project settings__project">
+                                            <a class="project__link project__link--arrow" href="#">
+                                                <span class="project__link-text">
+                                                    ebay.com
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="line-chart">
+                                        <div class="line-chart__chart-block">
+                                            <canvas class="line-chart__canvas" height="5vh" width="100%"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="pages__table-block">
+                                        <table class="table pages__table">
+                                            <tr class="table__tr pages__tr">
+                                                <th class="table__th pages__th">
+                                                    Path
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    Competitors
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    Search value
+                                                </th>
+                                                <th class="table__th pages__th" colspan="2">
+                                                    SoV
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    -/+
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    Cost value
+                                                </th>
+                                                <th class="table__th pages__th" colspan="2">
+                                                    Organic visitors
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    -/+
+                                                </th>
+                                                <th class="table__th pages__th" colspan="2">
+                                                    Avg. time spent
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    -/+
+                                                </th>
+                                                <th class="table__th pages__th" colspan="2">
+                                                    Avg. load  time
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    -/+
+                                                </th>
+                                                <th class="table__th pages__th" colspan="2">
+                                                    Bounce rate
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    -/+
+                                                </th>
+                                                <th class="table__th pages__th" colspan="2">
+                                                    Goals
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    -/+
+                                                </th>
+                                                <th class="table__th pages__th" colspan="2">
+                                                    Revenue
+                                                </th>
+                                                <th class="table__th pages__th">
+                                                    -/+
+                                                </th>
+                                            </tr>
+                                            <tr class="table__tr pages__tr">
+                                                <td class="table__td pages__td">
+                                                    word
+                                                </td>
+                                                <td class="table__td competitors__td">
+                                                    <div class="project">                                                        
+                                                        <a class="project__link" href="#">
+                                                            <span class="project__link-text">
+                                                                Keyword
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2                                       
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    <div class="total">
+                                                        <span class="total__item total__item--up">5.62</span>
+                                                    </div>  
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    7
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    5
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                            </tr>
+                                            <tr class="table__tr pages__tr">
+                                                <td class="table__td pages__td">
+                                                    word
+                                                </td>
+                                                <td class="table__td competitors__td">
+                                                    <div class="project">                                                        
+                                                        <a class="project__link" href="#">
+                                                            <span class="project__link-text">
+                                                                Keyword
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2                                       
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    <div class="total">
+                                                        <span class="total__item total__item--up">5.62</span>
+                                                    </div>  
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    7
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    5
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    2
+                                                </td>
+                                            </tr>
+                                            <tr class="table__tr table__tr--empty pages__tr">
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td competitors__td">
+                                                   
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                                                         
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr class="table__tr table__tr--empty pages__tr">
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td competitors__td">
+                                                   
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                                                         
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr class="table__tr table__tr--empty pages__tr">
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td competitors__td">
+                                                   
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                                                         
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr class="table__tr table__tr--empty pages__tr">
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td competitors__td">
+                                                   
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                                                         
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td" colspan="2">
+                                                    
+                                                </td>
+                                                <td class="table__td pages__td">
+                                                    
+                                                </td>
+                                            </tr>
+                                            
+                                        </table>
+                                    </div>
                                 </div>                               
                             </div>                            
                         </div>
