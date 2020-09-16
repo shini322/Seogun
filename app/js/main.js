@@ -66,7 +66,7 @@ ctx.forEach((item)=>{
   });
 });
 
-// Табы на --- странице
+// Табы
 
 const tabsCaptionsAside = document.querySelectorAll('.aside-bar__list-item'),
     tabsContentAside = document.querySelectorAll('.tabs-content__aside-content-tab'),
