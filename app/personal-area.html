@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!--start header-->
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__inner">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">
+                                    Прайс-лист
+                                </a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">
+                                    faq 
+                                 </a>
+                            </li>
+
+                            <li class="menu__list-item menu__list-item--mobile">
+                                <div class="personal-area personal-area--account personal-area--mobile" href="#">
+                                    <a class="personal-area__link" href="#">
+                                        log out
+                                    </a>
+                                    <a class="personal-area__account" href="#">
+                                        <span class="personal-area__account-text">
+                                            d.artimovich
+                                        </span>
+                                        <span class="personal-area__account-img-block">
+                                            <img class="personal-area__account-img" src="images/users/1.jpg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="logo" href="#">
+                        <span class="logo__text">seo</span>
+                        <img class="logo__img" src="images/logo.png" alt="">
+                        <span class="logo__text">gun</span>
+                    </a>
+                    <div class="header__right">
+                        <div class="personal-area personal-area--account" href="#">
+                            <a class="personal-area__link" href="#">
+                                log out
+                            </a>
+                            <a class="personal-area__account" href="#">
+                                <span class="personal-area__account-text">
+                                    d.artimovich
+                                </span>
+                                <span class="personal-area__account-img-block">
+                                    <img class="personal-area__account-img" src="images/users/1.jpg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <select class="language select">
+                            <option value="ru">ru</option>
+                            <option value="cn">cn</option>
+                            <option value="fr">fr</option>
+                            <option value="de">de</option>
+                        </select>
+                        <button class="nav-toggle">
+                            <span class="bar-top"></span>
+                            <span class="bar-mid"></span>
+                            <span class="bar-bot"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--end header-->
+
+        <!--start main-->
+        <main class="main" id="main">
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__list-item">
+                            <a href="#">
+                                Main
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__list-item">
+                            <span>
+                                Keywords Tracking Page
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="persoanl-area">
+                <div class="container">
+                    <div class="page-inner">
+                        <aside class="aside-bar persoanl-area__aside-bar">
+                            <ul class="aside-bar__list">
+                                <li class="aside-bar__list-item">
+                                    <span class="aside-bar__list-link active">
+                                        Personal info 
+                                    </span>
+                                </li>
+                                <li class="aside-bar__list-item">
+                                    <span class="aside-bar__list-link">
+                                        Change Password
+                                    </span>
+                                </li>
+                                <li class="aside-bar__list-item">
+                                    <span class="aside-bar__list-link">
+                                        Subscribe info
+                                    </span>
+                                </li>
+                            </ul>
+                        </aside>
+                        <div class="page-content persoanl-area__page-content">                            
+                            <div class="persoanl-area__tabs-content">
+                                <div class="tabs-content__aside-content-tab">
+                                    <h2 class="page-content__title">
+                                        Personal info
+                                    </h2>
+                                    <div class="persona-info">
+                                        <div class="persona-info__inner">
+                                            <div class="persona-info__img-block">
+                                                <img class="persona-info__img" src="images/personal-info-empty-img.png" alt="">
+                                            </div>
+                                            <div class="persona-info__text-block">
+                                                <div class="persona-info__item">
+                                                    <span class="persona-info__item-title">
+                                                        Email: 
+                                                    </span>
+                                                    <span class="persona-info__item-text persona-info__item-text--mail">
+                                                        nameofthe@mail.com
+                                                    </span>
+                                                </div>
+                                                <div class="persona-info__item">
+                                                    <span class="persona-info__item-title">
+                                                        Balance:
+                                                    </span>
+                                                    <span class="persona-info__item-text persona-info__item-text--balance">
+                                                        $435.23
+                                                    </span>
+                                                </div>
+                                                <div class="persona-info__item">
+                                                    <span class="persona-info__item-title">
+                                                        User Type:
+                                                    </span>
+                                                    <span class="persona-info__item-text persona-info__item-text--types">
+                                                        12
+                                                    </span>
+                                                </div>
+                                                <button class="button button--red persona-info__button">
+                                                    Change password
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                                <div class="tabs-content__aside-content-tab change-password">
+                                    <h2 class="page-content__title">
+                                        Change Password
+                                    </h2>
+                                    <form class="form change-password__form">
+                                        <div class="form__inner">
+                                            <div class="form__item change-password__item">
+                                                <input class="form__input change-password__input" type="password" placeholder="Current Password:">
+                                            </div>
+                                            <div class="form__item change-password__item">
+                                                <input class="form__input change-password__input" type="password" placeholder="New Password:">
+                                            </div>
+                                            <div class="form__item change-password__item">
+                                                <input class="form__input change-password__input" type="password" placeholder="Replace Password:">
+                                            </div>
+                                            <div class="form__buttons change-password__buttons">
+                                                <button class="button button--red change-password__submit" type="submit">
+                                                    Change password
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                    </form>
+                                </div>    
+                                <div class="tabs-content__aside-content-tab">
+                                    <h2 class="page-content__title">
+                                        Subscrabition variants
+                                    </h2>
+                                    <div class="subscribe">
+                                        <div class="subscribe__inner">
+                                            <div class="current-subscribe">
+                                                <div class="current-subscribe__inner">
+                                                    <div class="current-subscribe__title">
+                                                        Current subscribition
+                                                    </div>
+                                                    <div class="current-subscribe__item">
+                                                        <span class="current-subscribe__item-title">
+                                                            Email: 
+                                                        </span>
+                                                        <span class="current-subscribe__item-text current-subscribe__item-text--type">
+                                                            nameofthe@mail.com
+                                                        </span>
+                                                    </div>
+                                                    <div class="current-subscribe__item">
+                                                        <span class="current-subscribe__item-title">
+                                                            Projects limit: 
+                                                        </span>
+                                                        <span class="current-subscribe__item-text current-subscribe__item-text--type">
+                                                            2 out of 5
+                                                        </span>
+                                                    </div>
+                                                    <div class="current-subscribe__item">
+                                                        <span class="current-subscribe__item-title">
+                                                            Keywords limit:
+                                                        </span>
+                                                        <span class="current-subscribe__item-text current-subscribe__item-text--type">
+                                                            0 out of 50
+                                                        </span>
+                                                    </div>
+                                                    <div class="current-subscribe__item">
+                                                        <span class="current-subscribe__item-title">
+                                                            Reports limit: 
+                                                        </span>
+                                                        <span class="current-subscribe__item-text current-subscribe__item-text--type">
+                                                            out of 2
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="subscribe__table-block">
+                                                <table class="table subscribe__table">
+                                                    <tr class="table__tr subscribe__tr">
+                                                        <th class="table__th subscribe__th">    
+                                                            #
+                                                        </th>
+                                                        <th class="table__th subscribe__th">    
+                                                            Subscrabition type
+                                                        </th>
+                                                        <th class="table__th subscribe__th">    
+                                                            Price
+                                                        </th>
+                                                        <th class="table__th subscribe__th">    
+                                                            Projects limit
+                                                        </th>
+                                                        <th class="table__th subscribe__th">    
+                                                            Keywords limit
+                                                        </th>
+                                                        <th class="table__th subscribe__th">    
+                                                            Reports limit
+                                                        </th>
+                                                        <th class="table__th subscribe__th">    
+                                                            Action
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="table__tr subscribe__tr">
+                                                        <td class="table__td subscribe__td">    
+                                                            1
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            Default
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            0
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            5
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            50
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            2
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            <button class="button button--red">
+                                                                Select
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table__tr subscribe__tr">
+                                                        <td class="table__td subscribe__td">    
+                                                            2
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            Pro
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            100
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            5
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            500
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            5
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            <button class="button button--red">
+                                                                Select
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table__tr subscribe__tr">
+                                                        <td class="table__td subscribe__td">    
+                                                            3
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            Business
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            200
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            15
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            1500
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            20
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            <button class="button button--red">
+                                                                Select
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table__tr subscribe__tr">
+                                                        <td class="table__td subscribe__td">    
+                                                            4
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            Enterprise
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            400
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            25
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            5000
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            50
+                                                        </td>
+                                                        <td class="table__td subscribe__td">    
+                                                            <button class="button button--red">
+                                                                Select
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                          
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--end main-->
+
+        <!--start footer-->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <p class="footer__text">
+                        Copyright © 2020 SeoGun. All rights reserved.
+                    </p>
+                    <a class="footer__policy" href="#">
+                        Policy
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!--end footer-->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

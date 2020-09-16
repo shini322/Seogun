@@ -66,7 +66,43 @@ ctx.forEach((item)=>{
   });
 });
 
+// Табы на --- странице
 
+const tabsCaptionsAside = document.querySelectorAll('.aside-bar__list-item'),
+    tabsContentAside = document.querySelectorAll('.tabs-content__aside-content-tab'),
+    tabsParentAside = document.querySelector('.aside-bar__list');
+
+function hideTabsContentAside() {
+    tabsContentAside.forEach(item =>{
+        item.classList.remove('show', 'fade');
+        item.classList.add('hide');
+    });
+    tabsCaptionsAside.forEach(item =>{
+        item.classList.remove('active');
+    });
+}
+
+function showTabsContentAside (i = 0){
+  if(tabsContentAside[i] && tabsCaptionsAside[i]){
+    tabsContentAside[i].classList.add('show', 'fade');
+    tabsContentAside[i].classList.remove('hide');
+    tabsCaptionsAside[i].classList.add('active');
+  }    
+}
+hideTabsContentAside();
+showTabsContentAside();
+
+tabsParentAside.addEventListener('click', (e)=>{
+    const target = e.target.closest(".aside-bar__list-item");
+    if (target && target.classList.contains('aside-bar__list-item')){
+        tabsCaptionsAside.forEach((item, i)=>{
+            if(target == item){
+                hideTabsContentAside();
+                showTabsContentAside(i);
+            }
+        });
+    }
+});
 
 const tabsCaptions = document.querySelectorAll('.tabs__item'),
     tabsContent = document.querySelectorAll('.tabs-content__content-tab'),
@@ -83,14 +119,18 @@ function hideTabsContent() {
 }
 
 function showTabsContent (i = 2){
+  if(tabsContent[i] && tabsCaptions[i]){
     tabsContent[i].classList.add('show', 'fade');
     tabsContent[i].classList.remove('hide');
     tabsCaptions[i].classList.add('active');
+  }
+    
 }
 hideTabsContent();
 showTabsContent();
 
-tabsParent.addEventListener('click', (e)=>{
+if(tabsParent){
+  tabsParent.addEventListener('click', (e)=>{
     const target = e.target.closest(".tabs__item");
     if (target && target.classList.contains('tabs__item')){
         tabsCaptions.forEach((item, i)=>{
@@ -101,3 +141,7 @@ tabsParent.addEventListener('click', (e)=>{
         });
     }
 });
+}
+
+
+
