@@ -61,6 +61,8 @@ gulp.task('js', function(){
     'assest/js/jquery.nice-select.min.js',
     'assest/js/jquery.validate.min.js',
     'assest/js/ui2.js',
+    'assest/js/jquery.knob.js',
+
     // 'node_modules/rateyo/lib/iife/rateyo.js',
     // 'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',

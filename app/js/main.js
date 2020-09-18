@@ -118,7 +118,7 @@ function hideTabsContent() {
   });
 }
 
-function showTabsContent(i = 1) {
+function showTabsContent(i = 0) {
   if (tabsContent[i] && tabsCaptions[i]) {
     tabsContent[i].classList.add('show', 'fade');
     tabsContent[i].classList.remove('hide');
@@ -253,4 +253,407 @@ document.addEventListener('keydown', (e) => {
   if (e.code == 'Escape' && modal.classList.contains('show')) {
     closeModal();
   }
+});
+
+// Графики на странице Overview
+
+
+var ctxLine = document.querySelectorAll('.overview-lines__canvas');
+ctxLine.forEach((item) => {
+  item.getContext('2d');
+  var myLineChart = new Chart(item, {
+    type: 'line',
+
+    data: {
+      labels: [' ', ' ', ' ', ' ', ' ', ],
+      datasets: [{
+        backgroundColor: '#ffe6e6',
+        borderColor: 'rgb(226, 18, 19)',
+        borderWidth: 3,
+        data: [3, 2, 5, 7,9],
+        pointBorderWidth: '0',
+        pointHoverBorderWidth: '0',
+        pointRadius: '0',
+        pointBackgroundColor: 'transparent',
+        label: ''
+      }],
+
+    },
+    options: {
+      tooltips: false,
+      responsive: false,
+      legend: {
+        display: false
+      },
+      elements: {
+        line: {
+          tension: 0
+        }
+      },
+      scales: {
+        yAxes: [{
+          gridLines: {
+            display: false,
+            color: "#000"
+          },
+          ticks: {
+            display: false,
+            beginAtZero: true,
+            min: 1,
+            max: 10,
+            stepSize: 1
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            display: false,
+            color: "#000",
+            tickMarkLength: 10
+          },
+          ticks:{
+            display: false
+          }
+        }]
+      }
+    }
+  });
+});
+
+
+var ctxKeyword = document.querySelectorAll('.overview-keywords__canvas');
+ctxKeyword.forEach((item) => {
+  item.getContext('2d');
+  var myLineChart = new Chart(item, {
+    type: 'line',
+
+    data: {
+      labels: [' ', ' ', ' ', ' ', ' ', ],
+      datasets: [{
+        backgroundColor: 'transparent',
+        borderColor: '#e7ebf0',
+        borderWidth: 1,
+        data: [2, 2, 2, 2, 2],
+        pointBorderWidth: '0',
+        pointHoverBorderWidth: '0',
+        pointRadius: '0',
+        pointBackgroundColor: 'transparent',
+        label: ''
+      }],
+
+    },
+    options: {
+      tooltips: false,
+      responsive: false,
+      legend: {
+        display: false
+      },
+      elements: {
+        line: {
+          tension: 0
+        }
+      },
+      scales: {
+        yAxes: [{
+          gridLines: {
+            display: false,
+            color: "#000"
+          },
+          ticks: {
+            display: false,
+            beginAtZero: true,
+            min: 1,
+            max: 3,
+            stepSize: 1
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            display: false,
+            color: "#000",
+            tickMarkLength: 10
+          },
+          ticks:{
+            display: false
+          }
+        }]
+      }
+    }
+  });
+});
+
+var ctxRankings = document.querySelectorAll('.overview-rankings__canvas');
+ctxRankings.forEach((item) => {
+  item.getContext('2d');
+  var myLineChart = new Chart(item, {
+    type: 'bar',
+    data: {
+      labels: ['Sep 1', 'Sep 2', 'Sep 3', 'Sep 4', 'Sep 5', 'Sep 6', 'Sep 7' ],
+      datasets: [{
+        // backgroundColor: 'transparent',
+        borderColor: '#e7ebf0',
+        borderWidth: 1,
+        data: [2, 2, 2, 2, 2],
+        pointBorderWidth: '0',
+        pointHoverBorderWidth: '0',
+        pointRadius: '0',
+        pointBackgroundColor: 'transparent',
+        label: ''
+      }],
+
+    },
+    options: {
+      tooltips: false,
+      responsive: false,
+      legend: {
+        display: false
+      },
+      elements: {
+        line: {
+          tension: 0
+        }
+      },
+      scales: {
+        yAxes: [{
+          gridLines: {
+            display: false,
+            color: "#edf0f2"
+          },
+          ticks: {
+            beginAtZero: true,
+            min: 0,
+            max: 10,
+            stepSize: 1
+          }
+        }],
+        xAxes: [{    
+          gridLines: {
+            display: true,
+            color: "#edf0f2",
+            borderDash: [0, 0],
+          },
+          ticks: {
+            beginAtZero: true,
+            min: 0,
+            max: 10,
+            stepSize: 2
+          }
+        }]
+      }
+    }
+  });
+});
+
+var ctxRankings = document.querySelectorAll('.overview-competitors__canvas');
+ctxRankings.forEach((item) => {
+  item.getContext('2d');
+  var myLineChart = new Chart(item, {
+    type: 'bubble',
+    data: {
+      datasets: [{
+        label: '',
+        title: "ebay.com",
+        data: [{
+          x: 8,
+          y: 14.8,
+          r: 23,
+        }],
+        backgroundColor: "#e31212"
+      }]
+      },
+      options: {
+        tooltips: false,
+        responsive: false,
+        legend: {
+          display: false
+        },
+        elements: {
+          line: {
+            tension: 0
+          }
+        },
+        scales: {
+          yAxes: [{
+            gridLines: {
+              display: true,
+              color: "#edf0f2"
+            },
+            ticks: {
+              beginAtZero: true,
+              min: 0,
+              max: 29.6,
+              stepSize: 14.8
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Averge Position",
+              fontColor: '#838383',
+              fontFamily: 'Gilroy',
+              fontWeight: '400',
+              fontSize: '12'
+            }
+          }],
+          xAxes: [{    
+            gridLines: {
+              display: true,
+              color: "#edf0f2",
+              borderDash: [0, 0],
+            },
+            ticks: {
+              beginAtZero: true,
+              min: 0,
+              max: 16,
+              stepSize: 8
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Number of Keywords",
+              fontColor: '#838383',
+              fontFamily: 'Gilroy',
+              fontWeight: '400',
+              fontSize: '12'
+            }
+          }]
+        }
+      }
+    },
+    );
+});
+
+
+Chart.plugins.register({
+  afterDatasetsDraw: function(chart, easing) {
+    var ctx = chart.ctx;
+
+    chart.data.datasets.forEach(function(dataset, i) {
+      var meta = chart.getDatasetMeta(i);
+      if (meta.type == "bubble") { //exclude scatter
+        meta.data.forEach(function(element, index) {
+          // Draw the text in black, with the specified font
+          ctx.fillStyle = '#e31212';
+          var fontSize = 14;
+          var fontStyle = 'normal';
+          var fontFamily = 'Gilroy';
+          var fontWeight = '600';
+          ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily, fontWeight);
+
+          // Just naively convert to string for now
+          var dataString = dataset.data[index].toString();
+          // Make sure alignment settings are correct
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'top';
+
+          var padding = 0;
+          var position = element.tooltipPosition();
+          ctx.fillText(dataset.title, position.x + 30, position.y - (fontSize / 2) - padding);
+        });
+      } //if
+    });
+  }
+});
+
+
+var ctxFeatures = document.querySelectorAll('.overview-features__canvas');
+ctxFeatures.forEach((item) => {
+  item.getContext('2d');
+  var myLineChart = new Chart(item, {
+    type: 'bar',    
+    data: {
+      labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '' ],
+      datasets: [{
+        borderColor: 'transparent',
+        backgroundColor: [
+          '#ddefff',
+          '#ddefff',
+          '#ddefff',
+          '#ddefff',
+          '#e51212',
+          '#e51212',
+          '#e51212',
+          '#ddefff',
+          '#ffc9c9',
+          '#e51212',
+          '#e51212',
+          '#ddefff',
+          '#ddefff',
+          '#ddefff',
+        ],
+        barThickness: 40,
+        barValueSpacing: 0,
+        borderWidth: 0,
+        data: [0, 6, 0, 9, 6, 0, 0, 3, 4, 5, 1, 0, 0, 7, 3],
+        pointBorderWidth: '0',
+        pointHoverBorderWidth: '0',
+        pointRadius: '0',
+        pointBackgroundColor: 'transparent',
+        label: ''
+      }],
+
+    },
+      options: {
+        tooltips: false,
+        responsive: false,
+        legend: {
+          display: false
+        },
+        elements: {
+          line: {
+            tension: 0
+          }
+        },
+        scales: {
+          yAxes: [{
+            gridLines: {
+              display: true,
+              color: "#edf0f2"
+            },
+            ticks: {
+              beginAtZero: true,
+              min: 0,
+              max: 10,
+              stepSize: 2.5
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Keywords",
+              fontColor: '#838383',
+              fontFamily: 'Gilroy',
+              fontWeight: '400',
+              fontSize: '12'
+            }
+          }],
+          xAxes: [{   
+            
+            gridLines: {
+              display: false,
+              color: "#edf0f2",
+              borderDash: [0, 0],
+            },
+            ticks: {
+              beginAtZero: true,
+              min: 0,
+              max: 16,
+              stepSize: 8
+            },
+            
+          }]
+        }
+      }
+    },
+    );
+});
+
+
+
+
+
+
+$(".dial").knob({
+  'width': 26,
+  'height': 26,
+  'fgColor': '#e51212'
+});
+
+$(".dial-total").knob({
+  'width': 26,
+  'height': 18,
 });
