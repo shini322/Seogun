@@ -1033,7 +1033,7 @@ header{
     margin-left: 132px;
     max-width: 1270px;
     min-height: 682px;
-    padding: 15px 0 0;
+    padding: 20px 0 0;
     width: 100%;
     box-shadow: 5.209px 29.544px 77px 33px rgba(14, 49, 62, 0.14);
     border-radius: 15px;
@@ -2882,6 +2882,160 @@ header{
     &__checkbox{
         & + &{
             margin-left: 72px;
+        }
+    }
+}
+.dashboards{
+    &__head{
+        display: flex;
+        align-items: center;
+    }
+    &__add-button{
+        margin-left: auto;
+        margin-top: 10px;
+        margin-right: 25px;
+        padding: 6px 21px;
+    }
+    &__table-block{
+        margin-top: 30px;
+    }
+    &__table{
+        width: 100%;
+    }
+    &__tr{
+        &:last-child{
+            .dashboards__td{
+                padding-bottom: 112px;
+                border-bottom: none;
+            }
+        }
+    }
+    &__th{
+        padding: 12px 35px;
+        font-family: 'Gilroy';
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;        
+    }
+    &__th:not([colspan="2"]){
+        padding-left: 55px;
+        padding-right: 10px;
+        &:first-child{
+            width: 11%;
+        }
+        &:nth-child(2){
+            padding-left: 80px;
+            width: 22%;
+        }
+        &:last-child{
+            width: 24%;
+            padding-left: 58px;
+        }
+    }
+    &__td[colspan='6']{
+        padding-left: 23px !important;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &__name-project{
+        color: #017efe;
+        font-size: 14px;
+        line-height: 22px;
+        font-family: 'Gilroy';
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    &__td{ 
+        &--name{
+            padding: 40px 35px;
+            padding-left: 80px !important;
+            width: 22%;
+        }        
+    }
+    &__project{
+        font-size: 14px;
+        line-height: 22px;
+        font-family: 'Gilroy';
+        color: $red;
+    }
+    &__td:not([colspan="2"]){
+        padding-left: 55px;
+    }
+    &__tools{
+        display: flex;
+        margin-left: 10px;
+        align-items: center;
+    }
+    &__tool{
+        & + &{
+            margin-left: 30px;
+        }
+    }
+}
+.report{
+    &__head{
+        display: flex;
+        align-items: center;
+    }
+    &__add-button{
+        margin-left: auto;
+        margin-top: 10px;
+        margin-right: 25px;
+        padding: 6px 21px;
+    }
+    &__table-block{
+        margin-top: 30px;
+    }
+    &__table{
+        width: 100%;
+    }
+    &__type{
+        display: flex;
+        align-items: center;
+    }
+    &__type-img{
+        margin-right: 14px;
+        width: 23px;
+        height: 26px;
+    }
+    &__th{
+        padding: 22px 35px;
+        font-family: 'Gilroy';
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;    
+        letter-spacing: 0.4px;    
+    }
+    &__th:not([colspan="2"]){
+        padding-left: 55px;
+        padding-right: 10px;
+        &:first-child{
+            width: 16%;
+        }
+        &:nth-child(2){
+            padding-left: 80px;
+            width: 22%;
+        }
+        &:nth-child(3){
+            width: 21%;
+        }
+        &:nth-child(4){
+            width: 26%;
+        }
+        &:last-child{
+            width: 24%;
+            padding-left: 58px;
+        }
+    }
+    &__td{
+        padding: 32px 35px;
+    }
+    &__td:not([colspan="2"]){
+        padding-left: 55px;
+        &:nth-child(2){
+            padding-left: 80px;
         }
     }
 }
