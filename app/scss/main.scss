@@ -59,10 +59,13 @@ header{
     background-color: transparent;
  }
  .hide{
-     display: none;
+     display: none !important;
  }
  .show{
     display: block !important;
+  }
+  .show-inline{
+      display: inline-block !important;
   }
   .show-flex{
       display: flex !important;
@@ -87,7 +90,7 @@ header{
     z-index: 10;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/pages-bg.jpg);
+    // background-image: url(../img/pages-bg.jpg);
     background-position: top center;
     &--main{
         background-image: url(../img/main-bg.jpg);        
@@ -246,7 +249,27 @@ header{
     }
 }
 .header{
+    position: relative;
     padding-top: 40px;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 230px;
+        background-image: url(../img/header-bg.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    &--main{
+        &::before{
+            display: none;
+        }
+    }
     @include for-md{
         padding-top: 20px;
     }
@@ -367,6 +390,9 @@ header{
     text-transform: uppercase;
     letter-spacing: 1.5px;
     white-space: nowrap;
+    &--account{
+        margin-right: 17px;
+    }
     >   * + *{
         margin-left: 65px;
         @include for-md{
@@ -1037,15 +1063,16 @@ header{
     width: 100%;
     box-shadow: 5.209px 29.544px 77px 33px rgba(14, 49, 62, 0.14);
     border-radius: 15px;
+    background-color: $white;
     border: 4px solid $black;
     flex-shrink: 0;
-    // @include for-xl{
-    //     margin-left: 20px;
-    // }
-    // @include for-lg-md{
-    //     margin-left: 0;
-    //     margin-top: 30px;
-    // }
+    @include for-xl{
+        margin-left: 20px;
+    }
+    @include for-lg-md{
+        margin-left: 0;
+        margin-top: 30px;
+    }
     &__title{
         display: inline-block;
         position: relative;
@@ -2027,6 +2054,18 @@ header{
         transform: translateY(-50%);
         fill: #a3a3a3;
         transition: .3s;
+        &--infographic{
+            width: 24px;
+            height: 23px;
+        }
+        &--delete{
+            width: 18px;
+            height: 22px;
+        }
+        &--compare{ 
+            width: 29px;
+            height: 23px;
+        }
     }
     &__dropdown{
         position: absolute;
@@ -2593,6 +2632,8 @@ header{
     }
 }
 .overview-rankings{
+    max-width: 828px;
+    width: 100%;
     margin: 10px 10px 0;
     margin-left: 0;
     &__inner{
@@ -2600,6 +2641,7 @@ header{
         border: 1px solid #e6e6e6;
     }
     &__title{
+        margin-bottom: 12px;
         font-family: 'Gilroy';
         font-weight: 500;
         font-size: 16px;
@@ -2668,9 +2710,13 @@ header{
     }
 }
 .keyword-statistic{
-    margin: 10px 10px;
-    max-width: 404px;
+    margin: 10px 10px 0;
+    margin-right: 0;
+    max-width: 409px;
     width: 100%;
+    &:last-child{
+        margin-right: 10px;
+    }
     &__inner{
         padding: 13px 12px 12px 15px;
         border: 1px solid #e6e6e6;
@@ -2864,16 +2910,29 @@ header{
         line-height: 20px;
     }
     &__x-label{
+        display: flex;
+        justify-content: flex-start;
         flex-wrap: nowrap;
-        margin-left: 97px;
+        margin-left: 81px;
         margin-top: -19px;
     }
     &__x-label-container{
-        width: 40px;
+        width: auto;
         padding-right: 0;
-        & + &{
-            margin-left: 38px;
+        margin: 0;
+        flex-shrink: 0;
+        
+        &+&{
+            margin-left: 55px;
         }
+        
+    }
+    &__x-label-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     &__checkboxes{
         margin-left: 30px;
@@ -3039,3 +3098,386 @@ header{
         }
     }
 }
+.domains{
+    &__head{
+        display: flex;
+        align-items: center;
+    }
+    &__add-button{
+        margin-left: auto;
+        margin-top: 10px;
+        margin-right: 25px;
+        padding: 6px 21px;
+    }
+    &__table-block{
+        margin-top: 30px;
+    }
+    &__table{
+        width: 100%;
+    }
+    &__th:not([colspan="2"]){
+        padding-left: 55px;
+        padding-right: 10px;
+        &:first-child{
+            width: 17%;
+        }
+        &:nth-child(2){
+            padding-left: 45px;
+            width: 17%;
+        }
+        &:nth-child(3){
+            padding-left: 36px;
+            width: 13%;
+        }
+    }
+    &__td:not([colspan="2"]){
+        padding: 35px;
+        padding-left: 55px;
+        padding-right: 10px;
+        &:first-child{
+            width: 17%;
+        }
+        &:nth-child(2){
+            padding-left: 45px;
+            width: 17%;
+        }
+        &:nth-child(3){
+            padding-left: 36px;
+            width: 13%;
+        }
+    }
+    &__th{
+        padding: 12px 35px;
+        font-family: 'Gilroy';
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;        
+    }
+}
+.subscribe-info{
+    &__inner{
+        display: flex;
+        padding-bottom: 85px;
+        @include for-md{
+            flex-direction: column;
+        }
+    }
+    &__page-title{
+        margin-top: 22px;   
+        padding-left: 0;
+        @include for-md-mob{
+            font-size: 30px;
+        }
+    }
+    &__description-block{
+        margin-top: 77px;
+        @include for-md-mob{
+            margin-top: 20px;
+        }
+    }
+    &__rate-block{
+        margin-top: -16px;
+        @include for-md{
+            margin-top: 10px;
+        }
+    }
+}
+.subscribe-desc{
+    max-width: 390px;
+    width: 100%;
+    flex-shrink: 0;
+    @include for-lg-md{
+        max-width: 317px;
+    }
+    @include for-md{
+        max-width: 390px;
+        margin: 0 auto;
+    }
+    @include for-md-mob{
+        max-width: 100%;
+        width: 100%;
+    }
+    &__tilte{
+        padding: 12px 26px;
+        font-family: 'Gilroy';
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 20px;
+        background-color: #eaf7ff;
+        letter-spacing: 0.4px;
+        @include for-md-mob{
+            padding: 8px 13px;
+            font-size: 14px;
+        }
+    }
+    &__item{
+        padding: 15px 26px 20px;
+        font-family: 'Gilroy';
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.3px;
+        border-bottom: 1px solid #eaf7ff;
+        &:last-child{
+            border: none;
+        }
+        @include for-md-mob{
+            font-size: 12px;
+            line-height: 16px;
+            padding: 10px 13px;
+        }
+    }
+    
+}
+.subscribe-rate{
+    &__inner{
+        display: flex;
+        @include for-md{
+            flex-wrap: wrap;
+        }
+    }
+}
+.rate-item{
+    position: relative;
+    padding: 24px 0 0;
+    max-width: 360px;
+    width: 100%;
+    background-image: url(../img/rate-bg.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    border: 8px solid #9bccff;
+    border-radius: 15px;
+    box-shadow: 5.209px 29.544px 77px 33px rgba(14, 49, 62, 0.14);
+    flex-shrink: 0;
+    @include for-xl{
+        max-width: 280px;
+    }
+    @include for-lg-md{
+        max-width: 260px;
+    }
+    @include for-lg{
+        max-width: 213px;
+    }
+    @include for-md{
+        max-width: 100%;
+        width: 48%;
+        margin: 0 auto 20px;
+    }
+    @include for-md-mob{
+        width: 100%;
+    }
+    &__head{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 2;
+        &:before{
+            content: '';
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+            
+        }
+    }
+    &__name{
+        font-weight: 900;
+        font-size: 45px;
+        line-height: 45px;
+        color: $red;
+        text-transform: uppercase;
+        @include for-md-mob{
+            font-size: 40px;
+        }
+    }
+    &__price{
+        margin-top: 11px;
+        font-family: 'Gilroy';
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+        color: $white;
+        @include for-md-mob{
+            margin-top: 5px;
+            font-size: 18px;
+        }
+    }
+    &__info-block{
+        margin-top: 57px;
+        @include for-md-mob{
+            margin-top: 20px;
+        }
+    }
+    &__value{
+        padding-bottom: 45px;
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        border-bottom: 1px solid #eaf7ff;
+        &:nth-child(2){
+            padding: 28px 0;
+        }
+        &:nth-child(3){
+            padding: 38px 0;
+        }
+        &:nth-child(4){
+            padding: 27px 0;
+        }
+        &:nth-child(5){
+            padding: 100px 0;
+        }
+        &:last-child{
+            border: none;
+        }
+        @include for-md{
+            padding: 20px !important;
+        }
+        
+    }
+    &__shot{
+        position: absolute;
+        &--l-1{
+            top: 8px;
+            right: 6px;
+        }
+        &--l-2{
+            bottom: 192px;
+            left: 18px;
+        }
+        &--xl-1{
+            top: 72px;
+            right: 27px;
+        }
+        &--xl-2{
+            bottom: 16px;
+            right: 39px;
+        }
+        &--xxl-1{
+            width: 14px;
+            height: 21px;
+            transform: rotate(180deg);
+            top: 136px;
+            left: 30px;
+        }
+        &--xxl-2{
+            width: 23px;
+            height: 37px;
+            bottom: 35px;
+            left: 36px;
+        }
+    }
+    &--l{
+        .rate-item__head{
+            &::before{
+                background-image: url(../img/rate-l-before.png);
+                width: 235px;
+                height: 124px;
+                top: -21px;
+                @include for-xl{
+                    transform: scale(.9);
+                    transform-origin: 50% 40%;
+                }
+                @include for-lg{
+                    transform: scale(.85);
+                    transform-origin: 50% 60%;
+                }
+                @include for-md{
+                    transform: scale(.8) translateX(-50%);
+                    transform-origin: 0 0;
+                    left: 50%;
+                    top: -10%;
+                }  
+                
+            }
+        }
+    }
+    &--xl{
+        border-color: $red;
+        .rate-item__head{
+            &::before{
+                background-image: url(../img/rate-xl-before.png);
+                width: 284px;
+                height: 147px;
+                left: 16px;
+                top: -28px;
+                @include for-xl{
+                    transform: scale(.9);
+                    transform-origin: -30% 40%;
+                }
+                @include for-lg-md{
+                    transform: scale(.8);
+                    transform-origin: -10% 40%;
+                }
+                @include for-lg{
+                    transform: scale(.75);
+                    transform-origin: -30% 50%;
+                }
+                @include for-md{
+                    transform: scale(.8) translateX(-50%);
+                    transform-origin: 0 0;
+                    left: 50%;
+                    top: -20%;
+                }   
+            }
+        }
+    }
+    &--xxl{
+        padding-top: 30px;
+        border-color: $red;
+        background-image: url(../img/rate-red-bg.jpg);
+        border: none;
+        .rate-item__head{
+            &::before{
+                background-image: url(../img/rate-xxl-before.png);
+                width: 349px;
+                height: 135px;
+                left: 7px;
+                top: -25px;
+                @include for-xl{
+                    transform: scale(.8);
+                    transform-origin: -10% 40%;
+                }
+                @include for-lg-md{
+                    transform: scale(.75);
+                    transform-origin: -10% 40%;
+                }
+                @include for-lg{
+                    transform: scale(.7);
+                    transform-origin: -20% 50%;
+                }
+                @include for-md{
+                    transform: scale(.8) translateX(-50%);
+                    transform-origin: 0 0;
+                    left: 50%;
+                    top: -15%;
+                } 
+            }
+        }
+        .rate-item__price{
+            color: $black;
+        }
+        .rate-item__value{
+            color: $white;
+            border-color: #eaf7ff;
+        }
+    }
+
+}
+.rate-item + .rate-item{
+    margin-left: 30px;
+    @include for-xl{
+        margin-left: 20px;
+    }
+    @include for-lg-md {
+        margin-left: 10px;  
+    }
+    @include for-md-mob{
+        margin-left: 0;
+    }
+}
+
+  

@@ -106,12 +106,17 @@ tabsParentAside.addEventListener('click', (e) => {
 
 const tabsCaptions = document.querySelectorAll('.tabs__item'),
   tabsContent = document.querySelectorAll('.tabs-content__content-tab'),
-  tabsParent = document.querySelector('.tabs__inner');
+  tabsParent = document.querySelector('.tabs__inner'),
+  titleTabs = document.querySelectorAll('.tab-title');
 
 function hideTabsContent() {
   tabsContent.forEach(item => {
     item.classList.remove('show', 'fade');
     item.classList.add('hide');
+  });
+  titleTabs.forEach(item =>{
+    item.classList.remove('show-inline', 'fade');
+    item.classList.add('hide'); 
   });
   tabsCaptions.forEach(item => {
     item.classList.remove('active');
@@ -123,6 +128,8 @@ function showTabsContent(i = 0) {
     tabsContent[i].classList.add('show', 'fade');
     tabsContent[i].classList.remove('hide');
     tabsCaptions[i].classList.add('active');
+    titleTabs[i].classList.remove('hide');
+    titleTabs[i].classList.add('show-inline');
   }
 
 }
@@ -381,66 +388,85 @@ ctxKeyword.forEach((item) => {
   });
 });
 
-var ctxRankings = document.querySelectorAll('.overview-rankings__canvas');
-ctxRankings.forEach((item) => {
-  item.getContext('2d');
-  var myLineChart = new Chart(item, {
-    type: 'bar',
-    data: {
-      labels: ['Sep 1', 'Sep 2', 'Sep 3', 'Sep 4', 'Sep 5', 'Sep 6', 'Sep 7' ],
-      datasets: [{
-        // backgroundColor: 'transparent',
-        borderColor: '#e7ebf0',
-        borderWidth: 1,
-        data: [2, 2, 2, 2, 2],
-        pointBorderWidth: '0',
-        pointHoverBorderWidth: '0',
-        pointRadius: '0',
-        pointBackgroundColor: 'transparent',
-        label: ''
-      }],
 
+
+var ctxRankings = document.querySelector('.overview-rankings__canvas').getContext('2d');
+  
+var gradient = ctxRankings.createLinearGradient(0, 0, 0, 300);
+gradient.addColorStop(0, "rgb(255, 201, 201)");
+gradient.addColorStop(0.54, "rgb(255, 201, 201)");
+gradient.addColorStop(0.55, "rgb(221, 239, 255)");
+gradient.addColorStop(1, "rgb(222, 240, 255)");
+ctxRankings.fillStyle = gradient;
+ctxRankings.fillRect(0, 0, 300, 300);
+
+var myLineChart = new Chart(ctxRankings, {
+  type: 'bar',
+  data: {
+    labels: ['Sep 1', 'Sep 2', 'Sep 3', 'Sep 4', 'Sep 5', 'Sep 6', 'Sep 7'],
+    datasets: [{
+      backgroundColor: [
+        gradient,
+        gradient,
+        gradient,
+        gradient,
+        gradient,
+        gradient,
+        gradient,
+      ],
+      barThickness: 104,
+      borderColor: '#e7ebf0',
+      borderWidth: 1,
+      data: [8, 8, 8, 8, 8, 8, 8],
+      pointBorderWidth: '0',
+      pointHoverBorderWidth: '0',
+      pointRadius: '0',
+      pointBackgroundColor: 'transparent',
+      label: ''
+    }],
+
+  },
+  options: {
+    tooltips: false,
+    responsive: false,
+    legend: {
+      display: false
     },
-    options: {
-      tooltips: false,
-      responsive: false,
-      legend: {
-        display: false
-      },
-      elements: {
-        line: {
-          tension: 0
-        }
-      },
-      scales: {
-        yAxes: [{
-          gridLines: {
-            display: false,
-            color: "#edf0f2"
-          },
-          ticks: {
-            beginAtZero: true,
-            min: 0,
-            max: 10,
-            stepSize: 1
-          }
-        }],
-        xAxes: [{    
-          gridLines: {
-            display: true,
-            color: "#edf0f2",
-            borderDash: [0, 0],
-          },
-          ticks: {
-            beginAtZero: true,
-            min: 0,
-            max: 10,
-            stepSize: 2
-          }
-        }]
+    elements: {
+      line: {
+        tension: 0
       }
+    },
+    scales: {
+      yAxes: [{
+        gridLines: {
+          display: true,
+          color: "#edf0f2"
+        },
+        ticks: {
+          beginAtZero: true,
+          min: 0,
+          max: 10,
+          stepSize: 2
+        }
+      }],
+      xAxes: [{   
+        barPercentage: 1,
+        categoryPercentage: 0.6, 
+        gridLines: {
+          display: true,
+          color: "#edf0f2",
+          borderDash: [0, 0],
+        },
+        ticks: {
+          beginAtZero: true,
+          min: 0,
+          max: 10,
+          stepSize: 2
+        }
+      }]
     }
-  });
+  }
 });
 
 var ctxRankings = document.querySelectorAll('.overview-competitors__canvas');
@@ -558,7 +584,7 @@ ctxFeatures.forEach((item) => {
   var myLineChart = new Chart(item, {
     type: 'bar',    
     data: {
-      labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '' ],
+      labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '' , ''  ],
       datasets: [{
         borderColor: 'transparent',
         backgroundColor: [
@@ -576,11 +602,13 @@ ctxFeatures.forEach((item) => {
           '#ddefff',
           '#ddefff',
           '#ddefff',
+          '#ddefff',
+          '#ddefff',
         ],
         barThickness: 40,
-        barValueSpacing: 0,
+        // barValueSpacing: 0,
         borderWidth: 0,
-        data: [0, 6, 0, 9, 6, 0, 0, 3, 4, 5, 1, 0, 0, 7, 3],
+        data: [0, 7, 0, 9, 7, 0, 0, 4, 5, 6, 1, 0, 0, 7, 0, 3],
         pointBorderWidth: '0',
         pointHoverBorderWidth: '0',
         pointRadius: '0',
@@ -626,7 +654,7 @@ ctxFeatures.forEach((item) => {
             gridLines: {
               display: false,
               color: "#edf0f2",
-              borderDash: [0, 0],
+              // borderDash: [0, 0],
             },
             ticks: {
               beginAtZero: true,

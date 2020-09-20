@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="MobileOptimized" content="1600">
+    <meta name="viewport" content="width=1600">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -131,12 +131,13 @@
                                 </li>
                                 <li class="aside-bar__list-item">
                                     <a class="aside-bar__list-link" href="#">
-                                        Graphic-tab
+                                        Graphic
                                     </a>
                                 </li>
                             </ul>
                         </aside>
                         <div class="page-content">
+                            
                             <!--Dashboard-->
                             <div class="tabs-content__aside-content-tab">
                                 <div class="dashboards">
@@ -258,8 +259,7 @@
                                                         <div class="dashboards__tools">
                                                             <img class="table__keys dashboards__tool" src="images/keys.png" alt="">
                                                             <img class="table__axes dashboards__tool" src="images/axes.png" alt="">
-                                                        </div>
-                                                        
+                                                        </div>                                                        
                                                     </td>
                                                 </tr>
                                             </table>
@@ -358,7 +358,108 @@
                             </div>
                             <!--Domains-->
                             <div class="tabs-content__aside-content-tab">
-
+                                <div class="domains">
+                                    <div class="domains__inner">
+                                        <div class="domains__head">
+                                            <h2 class="page-content__title">
+                                                Domains
+                                            </h2>
+                                            <button class="button button--red domains__add-button">
+                                                Add Report
+                                                <span class="button__plus">
+                                                    +
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="domains__table-block">
+                                            <table class="table domains__table">
+                                                <tr class="table__tr domains__tr">
+                                                    <th class="table__th domains__th">
+                                                        Domain <br> name
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Project <br> name
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Keywords <br> count
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Created
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Tools
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                                <tr class="table__tr domains__tr">
+                                                    <td class="table__td domains__td">
+                                                        <a class="dashboards__project" href="#">
+                                                            nameofsite.com
+                                                        </a>
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        projectBest
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        2
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        2020-09-12  00:30:32
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        <div class="dashboards__tools">
+                                                            <img class="table__keys dashboards__tool" src="images/keys.png" alt="">
+                                                            <img class="table__axes dashboards__tool" src="images/axes.png" alt="">
+                                                        </div> 
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        <div class="project__actions">
+                                                            <button class="project__delete">
+        
+                                                            </button>
+                                                            <button class="project__infographic">
+        
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table__tr domains__tr">
+                                                    <td class="table__td domains__td">
+                                                        <a class="dashboards__project" href="#">
+                                                            bignameofsite.com
+                                                        </a>
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        projectBest
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        2
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        2020-09-12  00:30:32
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        <div class="dashboards__tools">
+                                                            <img class="table__keys dashboards__tool" src="images/keys.png" alt="">
+                                                        </div> 
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        <div class="project__actions">
+                                                            <button class="project__delete">
+        
+                                                            </button>
+                                                            <button class="project__infographic">
+        
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!--Reports-->
                             <div class="tabs-content__aside-content-tab ">
@@ -455,9 +556,20 @@
                             </div>
                             <!--Graphic-tab-->
                             <div class="tabs-content__aside-content-tab">
-                                <h2 class="page-content__title">
-                                    Competitors Page
-                                </h2>
+                                <div class="page-content__title-block">
+                                    <h2 class="page-content__title tab-title">
+                                        Overview Page
+                                    </h2>
+                                    <h2 class="page-content__title tab-title">
+                                        Keywords Tracking Page
+                                    </h2>
+                                    <h2 class="page-content__title tab-title">
+                                        Competitors Page
+                                    </h2>
+                                    <h2 class="page-content__title tab-title">
+                                        Pages
+                                    </h2>
+                                </div>                             
                                 <div class="navigation-container">
                                     <div class="tabs">
                                         <div class="tabs__inner">
@@ -801,7 +913,7 @@
                                                         <div class="overview-rankings__title">
                                                             Rankings Distribution
                                                         </div>
-                                                        <canvas class="overview-rankings__canvas" height="250" width='760' id="densityChart"></canvas>
+                                                        <canvas class="overview-rankings__canvas" height="300" width='760' id="densityChart"></canvas>
                                                         <div class="overview-rankings__checkboxes">
                                                             <div class="overview-rankings__checkbox">
                                                                 <div class="check-item overview-rankings__check-item">
@@ -1117,32 +1229,32 @@
                                                     <canvas class="overview-features__canvas" height="205" width='1195' id="densityChart"></canvas>
                                                     <div class="keywords__features overview-features__x-label">
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--adversiting"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--adversiting overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <img class="keywords__features-item-img"
                                                                     src="images/keyword-features/advertising-icon.png"
                                                                     alt="">
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--adversiting "
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--adversiting  overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <img class="keywords__features-item-img"
                                                                     src="images/keyword-features/advertising-icon.png"
                                                                     alt="">
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--search"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--search overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <img class="keywords__features-item-img"
                                                                     src="images/keyword-features/search-icon.png"
                                                                     alt="">
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--google-maps"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--google-maps overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--google-maps">
                                                                     <use
@@ -1152,8 +1264,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--google-maps keywords__features-item--clock"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--google-maps keywords__features-item--clock overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--google-maps">
                                                                     <use
@@ -1163,8 +1275,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--shopping-bag"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--shopping-bag overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--shopping-bag">
                                                                     <use
@@ -1174,8 +1286,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--information"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--information overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--information">
                                                                     <use
@@ -1185,8 +1297,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--list"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--list overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--list">
                                                                     <use
@@ -1196,8 +1308,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--link"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--link overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--link">
                                                                     <use
@@ -1207,8 +1319,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--tips"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--tips overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--tips">
                                                                     <use
@@ -1218,8 +1330,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--chat-box"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--chat-box overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--chat-box">
                                                                     <use
@@ -1229,8 +1341,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--question"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--question overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--question">
                                                                     <use
@@ -1240,8 +1352,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--tweet"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--tweet overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--tweet">
                                                                     <use
@@ -1251,8 +1363,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--photo"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--photo overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--photo">
                                                                     <use
@@ -1262,8 +1374,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--rate"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--rate overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--rate">
                                                                     <use
@@ -1273,8 +1385,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="keywords__features-container overview-features__x-label-container">
-                                                            <div class="keywords__features-item keywords__features-item--youtube"
-                                                                data-tool   tip="Related questions">
+                                                            <div class="keywords__features-item keywords__features-item--youtube overview-features__x-label-item"
+                                                                data-tooltip="Related questions">
                                                                 <svg
                                                                     class="keywords__features-item-icon keywords__features-item-icon--youtube">
                                                                     <use
@@ -1348,9 +1460,7 @@
                                                     <div class="toolbar">
                                                         <div class="toolbar__inner">
                                                             <button class="toolbar__item">
-                                                                <svg class="toolbar__icon toolbar__icon--setup">
-                                                                    <use xlink:href="images/sprite.svg#icon-setup"></use>
-                                                                </svg>
+                                                                <img class="toolbar__icon toolbar__icon--setup" src="images/toolbar-icons/setup.png" alt="">
                                                                 <div class="toolbar__text toolbar__text--grey">
                                                                     Table
                                                                 </div>
@@ -1359,9 +1469,7 @@
                                                                 </div>
                                                             </button>
                                                             <button class="toolbar__item">
-                                                                <svg class="toolbar__icon toolbar__icon--setup">
-                                                                    <use xlink:href="images/sprite.svg#icon-setup"></use>
-                                                                </svg>
+                                                                <img class="toolbar__icon toolbar__icon--list" src="images/toolbar-icons/list.png" alt="">
                                                                 <div class="toolbar__text toolbar__text--grey">
                                                                     Download
                                                                 </div>
@@ -1370,9 +1478,7 @@
                                                                 </div>
                                                             </button>
                                                             <button class="toolbar__item toolbar__item--select toolbar__item-edit">
-                                                                <svg class="toolbar__icon toolbar__icon--setup">
-                                                                    <use xlink:href="images/sprite.svg#icon-setup"></use>
-                                                                </svg>
+                                                                <img class="toolbar__icon toolbar__icon--infographic" src="images/toolbar-icons/infographic.png" alt="">
                                                                 <div class="toolbar__text toolbar__text--grey">
                                                                     Edit
                                                                 </div>
@@ -1413,9 +1519,7 @@
                                                                 </div>
                                                             </button>
                                                             <button class="toolbar__item toolbar__item--select toolbar__item-delete">
-                                                                <svg class="toolbar__icon toolbar__icon--setup">
-                                                                    <use xlink:href="images/sprite.svg#icon-setup"></use>
-                                                                </svg>
+                                                                <img class="toolbar__icon toolbar__icon--delete" src="images/toolbar-icons/delete.png" alt="">
                                                                 <div class="toolbar__text toolbar__text--grey">
                                                                     Delete
                                                                 </div>
@@ -1438,9 +1542,7 @@
                                                                 </div>
                                                             </button>
                                                             <button class="toolbar__item">
-                                                                <svg class="toolbar__icon toolbar__icon--setup">
-                                                                    <use xlink:href="images/sprite.svg#icon-setup"></use>
-                                                                </svg>
+                                                                <img class="toolbar__icon toolbar__icon--compare" src="images/toolbar-icons/compare.png" alt="">
                                                                 <div class="toolbar__text toolbar__text--grey">
                                                                     Comprare
                                                                 </div>
@@ -1517,7 +1619,7 @@
                                                                 <div class="keywords__features">
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--adversiting keywords__features-item--up"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <img class="keywords__features-item-img"
                                                                                 src="images/keyword-features/advertising-icon.png"
                                                                                 alt="">
@@ -1525,7 +1627,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--adversiting keywords__features-item--down"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <img class="keywords__features-item-img"
                                                                                 src="images/keyword-features/advertising-icon.png"
                                                                                 alt="">
@@ -1533,7 +1635,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--search"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <img class="keywords__features-item-img"
                                                                                 src="images/keyword-features/search-icon.png"
                                                                                 alt="">
@@ -1541,7 +1643,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--google-maps"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--google-maps">
                                                                                 <use
@@ -1552,7 +1654,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--google-maps keywords__features-item--clock"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--google-maps">
                                                                                 <use
@@ -1563,7 +1665,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--shopping-bag"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--shopping-bag">
                                                                                 <use
@@ -1574,7 +1676,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--information"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--information">
                                                                                 <use
@@ -1585,7 +1687,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--list"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--list">
                                                                                 <use
@@ -1650,7 +1752,7 @@
                                                                 <div class="keywords__features">
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--link"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--link">
                                                                                 <use
@@ -1661,7 +1763,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--tips"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--tips">
                                                                                 <use
@@ -1672,7 +1774,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--chat-box"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--chat-box">
                                                                                 <use
@@ -1683,7 +1785,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--question"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--question">
                                                                                 <use
@@ -1694,7 +1796,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--tweet"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--tweet">
                                                                                 <use
@@ -1705,7 +1807,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--photo"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--photo">
                                                                                 <use
@@ -1716,7 +1818,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--rate"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--rate">
                                                                                 <use
@@ -1727,7 +1829,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--youtube"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--youtube">
                                                                                 <use
@@ -1792,7 +1894,7 @@
                                                                 <div class="keywords__features">
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--adversiting keywords__features-item--up"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <img class="keywords__features-item-img"
                                                                                 src="images/keyword-features/advertising-icon.png"
                                                                                 alt="">
@@ -1800,7 +1902,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--adversiting keywords__features-item--down"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <img class="keywords__features-item-img"
                                                                                 src="images/keyword-features/advertising-icon.png"
                                                                                 alt="">
@@ -1808,7 +1910,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--search"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <img class="keywords__features-item-img"
                                                                                 src="images/keyword-features/search-icon.png"
                                                                                 alt="">
@@ -1816,7 +1918,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--google-maps"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--google-maps">
                                                                                 <use
@@ -1827,7 +1929,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--google-maps keywords__features-item--clock"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--google-maps">
                                                                                 <use
@@ -1838,7 +1940,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--shopping-bag"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--shopping-bag">
                                                                                 <use
@@ -1849,7 +1951,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--information"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--information">
                                                                                 <use
@@ -1860,7 +1962,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--list"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--list">
                                                                                 <use
@@ -1925,7 +2027,7 @@
                                                                 <div class="keywords__features">
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--link"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--link">
                                                                                 <use
@@ -1936,7 +2038,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--tips"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--tips">
                                                                                 <use
@@ -1947,7 +2049,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--chat-box"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--chat-box">
                                                                                 <use
@@ -1958,7 +2060,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--question"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--question">
                                                                                 <use
@@ -1969,7 +2071,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--tweet"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--tweet">
                                                                                 <use
@@ -1980,7 +2082,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--photo"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--photo">
                                                                                 <use
@@ -1991,7 +2093,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--rate"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--rate">
                                                                                 <use
@@ -2002,7 +2104,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--youtube"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--youtube">
                                                                                 <use
@@ -2067,7 +2169,7 @@
                                                                 <div class="keywords__features">
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--adversiting keywords__features-item--up"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <img class="keywords__features-item-img"
                                                                                 src="images/keyword-features/advertising-icon.png"
                                                                                 alt="">
@@ -2075,7 +2177,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--adversiting keywords__features-item--down"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <img class="keywords__features-item-img"
                                                                                 src="images/keyword-features/advertising-icon.png"
                                                                                 alt="">
@@ -2083,7 +2185,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--search"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <img class="keywords__features-item-img"
                                                                                 src="images/keyword-features/search-icon.png"
                                                                                 alt="">
@@ -2091,7 +2193,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--google-maps"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--google-maps">
                                                                                 <use
@@ -2102,7 +2204,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--google-maps keywords__features-item--clock"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--google-maps">
                                                                                 <use
@@ -2113,7 +2215,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--shopping-bag"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--shopping-bag">
                                                                                 <use
@@ -2124,7 +2226,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--information"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--information">
                                                                                 <use
@@ -2135,7 +2237,7 @@
                                                                     </div>
                                                                     <div class="keywords__features-container">
                                                                         <div class="keywords__features-item keywords__features-item--list"
-                                                                            data-tool   tip="Related questions">
+                                                                            data-tooltip="Related questions">
                                                                             <svg
                                                                                 class="keywords__features-item-icon keywords__features-item-icon--list">
                                                                                 <use
