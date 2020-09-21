@@ -82,7 +82,7 @@ function hideTabsContentAside() {
   });
 }
 
-function showTabsContentAside(i = 2) {
+function showTabsContentAside(i = 0) {
   if (tabsContentAside[i] && tabsCaptionsAside[i]) {
     tabsContentAside[i].classList.add('show', 'fade');
     tabsContentAside[i].classList.remove('hide');

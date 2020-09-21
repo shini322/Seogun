@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--start header-->
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__inner">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">
+                                    Прайс-лист
+                                </a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">
+                                    faq
+                                </a>
+                            </li>
+
+                            <li class="menu__list-item menu__list-item--mobile">
+                                <div class="personal-area personal-area--account personal-area--mobile" href="#">
+                                    <a class="personal-area__link" href="#">
+                                        log out
+                                    </a>
+                                    <a class="personal-area__account" href="#">
+                                        <span class="personal-area__account-text">
+                                            d.artimovich
+                                        </span>
+                                        <span class="personal-area__account-img-block">
+                                            <img class="personal-area__account-img" src="images/users/1.jpg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="logo" href="#">
+                        <span class="logo__text">seo</span>
+                        <img class="logo__img" src="images/logo.png" alt="">
+                        <span class="logo__text">gun</span>
+                    </a>
+                    <div class="header__right">
+                        <div class="personal-area personal-area--account" href="#">
+                            <a class="personal-area__link" href="#">
+                                log out
+                            </a>
+                            <a class="personal-area__account" href="#">
+                                <span class="personal-area__account-text">
+                                    d.artimovich
+                                </span>
+                                <span class="personal-area__account-img-block">
+                                    <img class="personal-area__account-img" src="images/users/1.jpg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <select class="language select">
+                            <option value="ru">ru</option>
+                            <option value="cn">cn</option>
+                            <option value="fr">fr</option>
+                            <option value="de">de</option>
+                        </select>
+                        <button class="nav-toggle">
+                            <span class="bar-top"></span>
+                            <span class="bar-mid"></span>
+                            <span class="bar-bot"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--end header-->
+        <!--start main-->
+        <main class="main" id="main">
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__list-item">
+                            <a href="#">
+                                Main
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__list-item">
+                            <span>
+                                Keywords Tracking Page
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="competitors">
+                <div class="container">
+                    <div class="page-inner">
+                        <aside class="aside-bar">
+                            <ul class="aside-bar__list">
+                                <li class="aside-bar__list-item">
+                                    <a class="aside-bar__list-link active" href="#">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="aside-bar__list-item">
+                                    <a class="aside-bar__list-link" href="#">
+                                        Project
+                                    </a>
+                                </li>
+                                <li class="aside-bar__list-item">
+                                    <a class="aside-bar__list-link" href="#">
+                                        Domains
+                                    </a>
+                                </li>
+                                <li class="aside-bar__list-item">
+                                    <a class="aside-bar__list-link" href="#">
+                                        Reporting
+                                    </a>
+                                </li>
+                                <li class="aside-bar__list-item">
+                                    <a class="aside-bar__list-link" href="#">
+                                        Graphic
+                                    </a>
+                                </li>
+                            </ul>
+                        </aside>
+                        <div class="page-content">
+                            <!--Domains-->
+                            <div class="tabs-content__aside-content-tab">
+                                <div class="domains">
+                                    <div class="domains__inner">
+                                        <div class="domains__head">
+                                            <h2 class="page-content__title">
+                                                Domains
+                                            </h2>
+                                            <button class="button button--red domains__add-button">
+                                                Add Report
+                                                <span class="button__plus">
+                                                    +
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="domains__table-block">
+                                            <table class="table domains__table">
+                                                <tr class="table__tr domains__tr">
+                                                    <th class="table__th domains__th">
+                                                        Domain <br> name
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Project <br> name
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Keywords <br> count
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Created
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Tools
+                                                    </th>
+                                                    <th class="table__th domains__th">
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                                <tr class="table__tr domains__tr">
+                                                    <td class="table__td domains__td">
+                                                        <a class="dashboards__project" href="#">
+                                                            nameofsite.com
+                                                        </a>
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        projectBest
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        2
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        2020-09-12  00:30:32
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        <div class="dashboards__tools">
+                                                            <img class="table__keys dashboards__tool" src="images/keys.png" alt="">
+                                                            <img class="table__axes dashboards__tool" src="images/axes.png" alt="">
+                                                        </div> 
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        <div class="project__actions">
+                                                            <button class="project__delete">
+        
+                                                            </button>
+                                                            <button class="project__infographic">
+        
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table__tr domains__tr">
+                                                    <td class="table__td domains__td">
+                                                        <a class="dashboards__project" href="#">
+                                                            bignameofsite.com
+                                                        </a>
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        projectBest
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        2
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        2020-09-12  00:30:32
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        <div class="dashboards__tools">
+                                                            <img class="table__keys dashboards__tool" src="images/keys.png" alt="">
+                                                        </div> 
+                                                    </td>
+                                                    <td class="table__td domains__td">
+                                                        <div class="project__actions">
+                                                            <button class="project__delete">
+        
+                                                            </button>
+                                                            <button class="project__infographic">
+        
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--end main-->
+
+        <!--start footer-->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <p class="footer__text">
+                        Copyright © 2020 SeoGun. All rights reserved.
+                    </p>
+                    <a class="footer__policy" href="#">
+                        Policy
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!--end footer-->
+        <div class="modal modal-competitors">
+            
+            <div class="modal__content modal__content">
+                <div class="modal__close" data-close>
+                    +
+                </div>
+                <div class="modal__title">
+                    add up to competitors
+                </div>
+                <div class="modal__inner">
+                    <div class="modal__left-side">
+                        <div class="modal__container">
+                            <div class="modal__container-title">
+                                add competitors
+                            </div>
+                            <div class="modal__block modal__block--add">
+
+                            </div>
+                            <button class="button--black modal__add-button">
+                                Add
+                                <span class="button__plus">+</span>
+                            </button>
+                        </div> 
+                        <div class="modal__container">
+                            <div class="modal__container-title">
+                                suggestions competitors
+                            </div>
+                            <div class="modal__block">
+                                <div class="modal__item">
+                                    competitors1.com
+                                    <button class="modal__item-plus">+</button>
+                                </div> 
+                                <div class="modal__item">
+                                    competitors2.com
+                                    <button class="modal__item-plus">+</button>
+                                </div>   
+                                <div class="modal__item">
+                                    competitors3.com
+                                    <button class="modal__item-plus">+</button>
+                                </div>     
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="modal__right-side">
+                        <div class="modal__container">
+                            <div class="modal__container-title">
+                                updated competitors
+                            </div>
+                            <div class="modal__block modal__block--update">
+                                <div class="modal__item">
+                                    nameofcompany.com
+                                    <button class="modal__item-delete">
+                                        
+                                    </button>
+                                </div>
+                            </div>
+                            
+                        </div> 
+                    </div>  
+                                    
+                </div>
+                <button class="button button--red modal__update-button">
+                    Update
+                </button>  
+            </div>
+        </div>
+        <div class="modal modal-keywords">            
+            <div class="modal__content">
+                <div class="modal__close" data-close>
+                    +
+                </div>
+                <div class="modal__title">
+                    add keywords
+                </div>
+                <div class="modal__inner">
+                    <div class="modal__left-side">
+                        
+                        <div class="modal__container">
+                            <div class="modal__container-title">
+                                sandbox
+                                <button class=" modal__container-clear">
+                                    Clear
+                                </button>
+                            </div>
+                            <div class="modal__block modal__block--sandbox">
+                                <div class="modal__item">
+                                    Keyword, teg 1, teg 2
+                                </div>  
+                                <div class="modal__item">
+                                    Keyword, teg 1
+                                </div> 
+                                <div class="modal__item">
+                                    Keyword, teg 1, teg 2
+                                </div>   
+                            </div>
+                        </div>   
+                        <div class="modal__container">                            
+                            <div class="modal__block modal__block--add">
+                                <div class="modal__item">
+                                    Tags for added keywords
+                                </div> 
+                            </div>
+                            <button class="button button--black modal__add-button">
+                                Add
+                                <span class="button__plus">+</span>
+                            </button>
+                        </div>   
+                        <div class="modal__container">
+                            <div class="modal__container-title">
+                                show suggestions keyword
+                            </div>
+                            <div class="modal__block modal__block--add modal__block--border-none">
+                                <div class="modal__item">
+                                    Tags for added keywords
+                                </div> 
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="modal__right-side">
+                        <div class="modal__container">
+                            <div class="modal__container-title">
+                                updated competitors
+                                <button class="modal__container-clear">
+                                    Import from file
+                                </button>
+                            </div>
+                            <div class="modal__block modal__block--project">
+                                <div class="modal__item">
+                                    
+                                </div>
+                            </div>
+                            <div class="modal__buttons-block">
+                                <button class="button button--red modal__connect">
+                                    Connect google <br> analytics accaunt
+                                </button>
+                                <button class="button button--grey modal__connect">
+                                    Connect google serch <br> console accaunt
+                                </button>
+                            </div>
+                            <div class="modal__keywords">
+                                <div class="modal__keyword">
+                                    Food near
+                                </div>
+                                <div class="modal__keyword">
+                                    Food 4 less me
+                                </div>
+                                <div class="modal__keyword">
+                                    Food delivery
+                                </div>
+                                <div class="modal__keyword">
+                                    Food delivery near
+                                </div>
+                            </div>
+                            
+                        </div> 
+                    </div>  
+                                    
+                </div>
+                <button class="button button--red modal__update-button">
+                    Start tracking
+                </button>  
+            </div>
+        </div>
+        <div class="modal modal-project">
+            <div class="modal__content modal-project__content">
+                <div class="modal__close" data-close>
+                    +
+                </div>
+                <div class="modal__title">
+                    add keywords
+                </div>
+                <div class="modal__inner">
+                    <form class="form modal-project__form">
+                        <div class="form__inner modal-project__form-inner">
+                            <div class="form__item modal-project__form-item">
+                                <input class="form__input change-password__input" type="text" placeholder="Enter project Name">
+                            </div>
+                            <div class="form__item modal-project__form-item">
+                                <input class="form__input change-password__input" type="text" placeholder="Enter domain Name">
+                            </div>
+                            <div class="form__buttons modal-project__buttons">
+                                <button class="button button--red modal-project__button modal-project__close" type="submit" data-close>
+                                    Close
+                                    <span class="modal-project__close-icon">
+                                        +
+                                    </span>
+                                </button>
+                                <button class="button button--black button--shot modal-project__button" type="submit">
+                                    Next
+                                </button>
+                            </div>
+                        </div>                    
+                    </form>                               
+                </div>  
+            </div>
+                      
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
