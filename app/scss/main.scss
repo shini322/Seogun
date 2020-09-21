@@ -86,7 +86,7 @@ header{
     min-height: 100%;
     // width: 100%;
     // max-width: 100%;
-    // overflow: hidden;
+    overflow: hidden;
     z-index: 10;
     background-size: cover;
     background-repeat: no-repeat;
@@ -968,7 +968,7 @@ header{
     font-size: 12px;
     line-height: 16px;
     @include for-md-mob{
-        padding-top: 50px;
+        padding-top: 90px;
     }
     &__list{
         display: flex;
