@@ -68,41 +68,41 @@ ctx.forEach((item) => {
 
 // Табы
 
-const tabsCaptionsAside = document.querySelectorAll('.aside-bar__list-item'),
-  tabsContentAside = document.querySelectorAll('.tabs-content__aside-content-tab'),
-  tabsParentAside = document.querySelector('.aside-bar__list');
+// const tabsCaptionsAside = document.querySelectorAll('.aside-bar__list-item'),
+//   tabsContentAside = document.querySelectorAll('.tabs-content__aside-content-tab'),
+//   tabsParentAside = document.querySelector('.aside-bar__list');
 
-function hideTabsContentAside() {
-  tabsContentAside.forEach(item => {
-    item.classList.remove('show', 'fade');
-    item.classList.add('hide');
-  });
-  tabsCaptionsAside.forEach(item => {
-    item.classList.remove('active');
-  });
-}
+// function hideTabsContentAside() {
+//   tabsContentAside.forEach(item => {
+//     item.classList.remove('show', 'fade');
+//     item.classList.add('hide');
+//   });
+//   tabsCaptionsAside.forEach(item => {
+//     item.classList.remove('active');
+//   });
+// }
 
-function showTabsContentAside(i = 0) {
-  if (tabsContentAside[i] && tabsCaptionsAside[i]) {
-    tabsContentAside[i].classList.add('show', 'fade');
-    tabsContentAside[i].classList.remove('hide');
-    tabsCaptionsAside[i].classList.add('active');
-  }
-}
-hideTabsContentAside();
-showTabsContentAside();
+// function showTabsContentAside(i = 0) {
+//   if (tabsContentAside[i] && tabsCaptionsAside[i]) {
+//     tabsContentAside[i].classList.add('show', 'fade');
+//     tabsContentAside[i].classList.remove('hide');
+//     tabsCaptionsAside[i].classList.add('active');
+//   }
+// }
+// hideTabsContentAside();
+// showTabsContentAside();
 
-tabsParentAside.addEventListener('click', (e) => {
-  const target = e.target.closest(".aside-bar__list-item");
-  if (target && target.classList.contains('aside-bar__list-item')) {
-    tabsCaptionsAside.forEach((item, i) => {
-      if (target == item) {
-        hideTabsContentAside();
-        showTabsContentAside(i);
-      }
-    });
-  }
-});
+// tabsParentAside.addEventListener('click', (e) => {
+//   const target = e.target.closest(".aside-bar__list-item");
+//   if (target && target.classList.contains('aside-bar__list-item')) {
+//     tabsCaptionsAside.forEach((item, i) => {
+//       if (target == item) {
+//         hideTabsContentAside();
+//         showTabsContentAside(i);
+//       }
+//     });
+//   }
+// });
 
 const tabsCaptions = document.querySelectorAll('.tabs__item'),
   tabsContent = document.querySelectorAll('.tabs-content__content-tab'),
