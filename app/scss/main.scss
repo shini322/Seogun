@@ -2228,6 +2228,8 @@ header{
         line-height: 21px;
     }
     &__add-button{
+        display: flex;
+        align-items: center;
         margin-top: 14px;
     }
     &__item-delete{
