@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+    <div class="wrapper wrapper--admin">
+        <!--start header-->
+        <header class="header header--admin" id="header">
+            <div class="container">
+                <div class="header__inner">                    
+                    <div class="header__right header__right--admin-login">                        
+                        <select class="language select">
+                            <option value="ru">ru</option>
+                            <option value="cn">cn</option>
+                            <option value="fr">fr</option>
+                            <option value="de">de</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--end header-->
+
+        <!--start main-->
+        <main class="main" id="main">  
+            
+            <div class="admin-login">
+                <div class="container">
+                    <div class="admin-login__inner">                        
+                        <div class="admin-login__form-block">
+                            <h2 class="page-content__title  admin-login__title">
+                                Login Form
+                            </h2>
+                            <form class="admin-form admin-login__form" method="POST">                                
+                                <div class="admin-form__inner">
+                                    <div class="admin-form__container">
+                                        <div class="admin-form__item admin-login__item">
+                                            <label class="admin-form__label">
+                                                Login:
+                                            </label>
+                                            <input class="admin-form__input admin-login__input" name="login" type="email">
+                                        </div>
+                                        <div class="admin-form__item admin-login__item">
+                                            <label class="admin-form__label">
+                                                Password:
+                                            </label>
+                                            <input class="admin-form__input admin-login__input" name="password" type="password">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="admin-form__buttons">
+                                        <button class="button button--red button--shot admin-form__submit admin-login__submit" type="submit">
+                                            Login
+                                        </button>
+                                        <a class="login-page__forgot" href="#">
+                                            Forgot password
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        <!--end main-->
+
+        <!--start footer-->
+        <footer class="footer footer--admin" id="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <p class="footer__text">
+                        Copyright © 2020 SeoGun. All rights reserved.
+                    </p>
+                    <a class="footer__policy" href="#">
+                        Policy
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!--end footer-->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

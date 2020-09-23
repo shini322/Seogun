@@ -208,8 +208,10 @@ body.addEventListener('mouseout', (e) => {
 const modal = document.querySelectorAll('.modal'),
   modalCompetitors = document.querySelector('.modal-competitors'),
   modalKeywords = document.querySelector('.modal-keywords'),
+  modalProject = document.querySelector('.modal-project'),
   btnOpenModalCompetitors = document.querySelectorAll('[data-modal-competitors]'),
   btnOpenModalKeywords = document.querySelectorAll('[data-modal-keywords]'),
+  btnOpenModalProject = document.querySelectorAll('[data-modal-project]'),
   btnCloseModal = document.querySelectorAll('[data-close]');
 
   btnOpenModalCompetitors.forEach((item) => {
@@ -226,6 +228,16 @@ btnOpenModalKeywords.forEach((item) => {
     
     modalKeywords.classList.add('show-flex');
     modalKeywords.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = '16px';
+  });
+});
+
+btnOpenModalProject.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    
+    modalProject.classList.add('show-flex');
+    modalProject.classList.remove('hide');
     document.body.style.overflow = 'hidden';
     document.body.style.paddingRight = '16px';
   });
